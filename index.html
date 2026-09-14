@@ -1,0 +1,399 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Christopher Lucas - Developpeur Pipeline</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="#top" class="brand"><span class="brand-dot"></span></a>
+
+                <nav class="nav">
+                    <a href="#projects">Projets</a>
+                    <a href="#about">À propos</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+            </div>
+        </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-name"> Développeur Pipeline - VFX</p>
+
+                <h1 class="hero-title">
+                    <span class="type-line" id="typeLine"></span><span class="cursor" aria-hidden="true">_</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    Je me suis trouvé un intérêt pour les VFX
+                    et le scripting dès mes 11 ans. Ça a tout
+                    d’abord commencé comme un hobby,
+                    qui a ensuite évolué en une vraie
+                    passion.
+                </p>
+
+                <div class="hero-links">
+                    <a href="#projects" class="btn btn-primary">Voir les projets</a>
+                    <a href="https://github.com/CAL20120" target="_blank" rel="noopener" class="btn btn-ghost">Github</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-inner">
+                <p class="section-label">Projets</p>
+
+                <article class="module" id="fireflies-pres">
+                    <div class="module-head">
+                        <div class="module-head-title">
+                            <h3 class="module-title">Fireflies</h3>
+                            <span class="module-sub">pipeline VFX orienté USD</span>
+                        </div>
+
+                        <div class="view-toggle" role="tablist" aria-label="lod">
+                            <button class="view-toggle-btn active" data-view-btn="simple" role="tab" aria-selected="true">Explication</button>
+                            <button class="view-toggle-btn" data-view-btn="technical" role="tab" aria-selected="false">Vue technique</button>
+                        </div>
+                    </div>
+
+                    <div class="module-body">
+                        <p class="module-pitch">
+                            Fireflies est un pipeline développé comme projet de fin d'études, pensé pour supporter
+                            les besoins de projets CGI avec RenderMan en USD. Il s'agit d'un écosystème complet permettant
+                            à une équipe de travailler ensemble, sur un ou plusieurs projets, en favorisant la coordination
+                            et le partage d'informations.
+                        </p>
+
+                        <div class="view view-simple" data-view-panel="simple">
+                            <p class="story-lede">
+                                Fireflies répond aux besoins des productions VFX, en permettant un suivi des tâches, fichiers, versions,
+                                et des calculs. Ce pipeline répond également à des besoins de coordination et d'échanges qui dans des productions
+                                en équipes sont des soucis récurrents.
+                            </p>
+
+                            <div class="compare">
+                                <div class="compare-col compare-before">
+                                    <p class="compare-label">Sans Fireflies</p>
+                                    <ul class="compare-list">
+                                        <li>Chercher les bonnes versions de plans, assets, fichiers divers manuellement.</li>
+                                        <li>Envoi manuel de versions, renommage et planification manuelle.</li>
+                                        <li>Révision manuelle des versions.</li>
+                                        <li>Gestion des rendus manuelle.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="compare-col compare-after">
+                                    <p class="compare-label">Avec Fireflies</p>
+                                    <ul class="compare-list">
+                                        <li>Trouver rapidement ce dont on a besoin, le bon fichier, et la bonne version.</li>
+                                        <li>Vérification, publication, et suivi d'un plan ou d'un asset en un clic.</li>
+                                        <li>Suivi et mise à jour automatique des tâches entre les départements, les tâches suivantes se mettent à jour
+                                            automatiquement.
+                                        </li>
+                                        <li>Intégration complète d'un outil de suivi de production et de révision (Kitsu).</li>
+                                        <li>Gestion des rendus et calculs automatisée, et contrôlée.</li>
+                                        <li>Intégration complète de l'architecture USD</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="module-heading">Suivez un plan, de la conception au rendu final.</h4>
+
+                            <div class="stepper">
+                                <div class="stepper-nav" role="tablist" aria-label="étapes dans le pipeline">
+                                    <button class="step-btn active" data-step="1" role="tab" aria-selected="true">1. La tâche est assignée</button>
+                                    <button class="step-btn" data-step="2" role="tab" aria-selected="false">2. L'artiste publie</button>
+                                    <button class="step-btn" data-step="3" role="tab" aria-selected="false">3. Validation</button>
+                                    <button class="step-btn" data-step="4" role="tab" aria-selected="false">4. Rendu</button>
+                                </div>
+
+                                <div class="stepper-panel">
+                                    <div class="step-content active" data-step-content="1">
+                                        <p>
+                                            Le studio assigne une tâche à un artiste, dans l'outil de suivi de production consultable
+                                            par toute l'équipe. L'artiste sait ensuite quelles tâches il doit réaliser, leur importance,
+                                            le temps dédié à chaque tâche, et dans quel contexte.
+                                        </p>
+                                        <p class="step-tech">
+                                            Suivi de production via Kitsu (API Gazu), résolution de contexte local et distant intégrée
+                                            directement dans les DCC.
+                                        </p>
+                                    </div>
+
+                                    <div class="step-content" data-step-content="2">
+                                        <p>
+                                            L'artiste récupere via les outils inclus toutes les ressources nécessaires et une fois
+                                            son travail terminé il "publie" son travail. Le système de publication s'occupe de vérifier
+                                            la conformité, et corriger en conséquence. Le travail est sauvegardé au bon endroit, avec
+                                            la bonne nomenclature et est mis à jour pour la production. Les autres départements peuvent
+                                            ensuite récuperer son travail.
+                                        </p>
+
+                                        <p class="step-tech">
+                                            Le système de publish est basé sur Pyblish, et commun entre tous les DCC
+                                            (Houdini, Maya). Tout les fichiers sont écrits en USD avec une prise en charge des familles (asset, shot,
+                                            dépendance d'animation).
+                                        </p>
+                                    </div>
+
+                                    <div class="step-content" data-step-content="3">
+                                        <p>
+                                            Avant que le travail parte directement a la prochaine tache ou rendu, un responsable vérifie et valide
+                                            le travail a travers un logiciel dédié permettant de visualiser chaque tache, leurs status, versions, previews.
+                                            De cette maniere tout le monde peut ensuite travailler sur une version validée commune.
+                                        </p>
+
+                                        <p class="step-tech">
+                                            Le Fireflies Resolver (application basé sur PySide) pilote des layerStacks USD dédiés
+                                            (à valider, valide, assemblage final).
+                                        </p>
+                                    </div>
+
+                                    <div class="step-content" data-step-content="4">
+                                        <p>
+                                            Une fois validé le plan part automatiquement en rendu, avec RenderMan, sans qu'aucun fichier
+                                            n'ait à être ouvert, déplacé, ou préparé à l'avance; tout se fait automatiquement.
+                                        </p>
+
+                                        <p class="step-tech">
+                                            Les jobs sont soumis à Deadline, de la génération des fichiers USD en local (ou sur la farm) au rendu
+                                            via husk.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="view view-technical" data-view-panel="technical" hidden>
+                            <ul class="tag-row">
+                                <li class="tag">Python</li>
+                                <li class="tag">C++ (Launcher)</li>
+                                <li class="tag">USD</li>
+                                <li class="tag">Houdini</li>
+                                <li class="tag">Maya</li>
+                                <li class="tag">Kitsu</li>
+                                <li class="tag">Deadline</li>
+                                <li class="tag">Pyblish</li>
+                            </ul>
+
+                            <div class="flow-graph">
+                                <span class="flow-step">Kitsu - Création d'une tâche (intégré aux DCC)</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-step">Publish (Houdini / Maya)</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-step">Fireflies Resolver - Validation</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-step">Rendu sur farm (Deadline)</span>
+                            </div>
+
+                            <h4 class="module-heading">Features</h4>
+                            <div class="feature-grid">
+                                <div class="feature">
+                                    <p class="feature-title">Launcher & Contexte</p>
+                                    <p class="feature-text">
+                                        Le launcher permet de lancer les DCC dans le bon environnement. Le système de contexte
+                                        permet de résoudre le contexte de production (séquence, shot, tâche) à partir du chemin
+                                        du fichier (soumis à la nomenclature et générés depuis les outils de contexte).
+                                    </p>
+                                </div>
+
+                                <!-- TODO: Add a section dedicated for the tools not mentioned (preview etc)-->
+
+                                <div class="feature">
+                                    <p class="feature-title">Publish unifié</p>
+                                    <p class="feature-text">
+                                        Un systeme de publish basé sur Pyblish, partagé entre Houdini et Maya, avec un système de
+                                        familles dédié pour les entités (assets, shots) avec une gestion des dépendances notamment
+                                        pour les animations.
+                                    </p>
+                                </div>
+
+                                <div class="feature">
+                                    <p class="feature-title">Fireflies Resolver</p>
+                                    <p class="feature-text">
+                                        Une application basé sur PySide permettant de piloter la validation des entités avec des layerStacks USD,
+                                        des callbacks de validation, callbacks au tracker de production, et envoi des rendus de livraison.
+                                        Permet une visualisation claire et propre des étapes de validation, tout en les rendant flexibles.
+                                    </p>
+                                </div>
+
+                                <div class="feature">
+                                    <p class="feature-title">Shot builder dynamique</p>
+                                    <p class="feature-text">
+                                        Les tâches publiées mettent à jour automatiquement les layerStacks de travail dépendantes
+                                        (ex: FX -> Lighting); tous les départements ont toujours une version de travail courante
+                                        et flexible.
+                                    </p>
+                                </div>
+
+                                <div class="feature">
+                                    <p class="feature-title">Production Tracking (Kitsu)</p>
+                                    <p class="feature-text">
+                                        Intégration complète de Kitsu via l'API Gazu, les tâches, status, assignations
+                                        relatives aux assets et shots. Le contexte dans les DCC est directement synchronisé
+                                        à Kitsu. Les artistes peuvent également accéder aux informations
+                                        depuis le portail, ou directement depuis les DCC.
+                                    </p>
+                                </div>
+
+                                <div class="feature">
+                                    <p class="feature-title">Render Farm (Deadline)</p>
+                                    <p class="feature-text">
+                                        Gestion automatisée des calculs via Deadline. Génération et préparation des jobs (génération
+                                        des fichiers USD, job de rendu Husk) et envoi sur la farm. Avec des outils intégrés
+                                        liés a RenderMan et Solaris.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TODO: Add cleaner dedicated sections by theme and use cases-->
+
+                        <h4 class="module-heading">Le pipeline et ses outils en images</h4>
+
+                        <div class="feature-shots">
+                            <p class="feature-shots-label">Launcher &amp; Contexte</p>
+                            <div class="shot-grid">
+                                <figure class="shot" data-caption="Fireflies Launcher">
+                                    <img src="images/fireflies_launcher.png" alt="Fireflies Launcher">
+                                    <figcaption>Launcher & Contexte - sélection d'environnement et de contexte (scene)</figcaption>
+                                </figure>
+
+                                <figure class="shot" data-caption="Selection du contexte depuis un DCC">
+                                    <video src="images/houdini_context.mp4" controls></video>
+                                    <figcaption>Sélection du contexte depuis un DCC</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="feature-shots">
+                            <p class="feature-shots-label">Gestion des assets et publish</p>
+                            <div class="shot-grid">
+                                <figure class="shot" data-caption="Asset Manager">
+                                    <img src="images/asset_manager.png" alt="Fireflies Launcher">
+                                    <figcaption>Asset Manager</figcaption>
+                                </figure>
+
+                                <figure class="shot" data-caption="Lib Manager">
+                                    <img src="images/lib_assets.png" alt="Fireflies Launcher">
+                                    <figcaption>Lib Manager</figcaption>
+                                </figure>
+
+                                <figure class="shot" data-caption="Publish depuis un DCC">
+                                    <video src="images/publish_hou.mp4" controls></video>
+                                    <figcaption>Publish depuis un DCC</figcaption>
+                                </figure>
+
+                                <figure class="shot" data-caption="Publish d'animations depuis maya">
+                                    <video src="images/publish_anim.mp4" controls></video>
+                                    <figcaption>Publish d'animations depuis Maya</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="feature-shots">
+                            <p class="feature-shots-label">Validation et livraison (Fireflies Resolver)</p>
+                            <div class="shot-grid">
+                                <figure class="shot" data-caption="Validation d'un shot">
+                                    <video src="images/shot_validation.mp4" controls></video>
+                                    <figcaption>Fireflies Resolver - processus de validation d'entité (Asset / Shot)</figcaption>
+                                </figure>
+
+                                <figure class="shot" data-caption="Rendu d'une livraison">
+                                    <video src="images/render_delivery.mp4" controls></video>
+                                    <figcaption>Fireflies Resolver - envoi d'un shot en rendu pour la livraison</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="feature-shots">
+                            <p class="feature-shots-label">Calculs divers (via Deadline)</p>
+                            <div class="shot-grid">
+                                <figure class="shot" data-caption="Envoi un rendu vers la farm depuis Houdini">
+                                    <img src="images/fireflies_rm_render.png" alt="Node de rendu Fireflies sur Houdini">
+                                    <figcaption>Envoi d'un rendu vers la farm depuis Houdini</figcaption>
+                                </figure>
+
+                                <figure class="shot" data-caption="Envoi un cache vers la farm depuis Houdini">
+                                    <img src="images/fireflies_cache.png" alt="Node de cache Fireflies sur Houdini">
+                                    <figcaption>Envoi d'un cache vers la farm depuis Houdini</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <p class="shot-note">
+                            Ce pipeline contient encore d'autres outils ! Gestionnaire des lumières dans solaris, textures,
+                            previews automatisées pour review et gestion de libs supplémentaires.
+                        </p>
+
+                <div class="module-foot">
+                    <a href="https://github.com/CAL20120/Fireflies" target="_blank" rel="noopener" class="link-arrow">
+                        Pour plus de détails - voir le projet sur GitHub
+                    </a>
+                </div>
+
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section section-alt">
+            <div class="section-inner">
+                <p class="section-label">À propos</p>
+                <p class="about-text">
+                    J'ai toujours eu un intérêt pour la technique, j'ai été vite attiré par le développement et le scripting.
+                    Je suis diplômé de VFX-WORKSHOP, et dans mon parcours j'ai développé rapidement un goût pour la création
+                    de systèmes et d'outils permettant de faire face à des besoins de production. Je suis aujourd'hui à l'écoute
+                    d'opportunités en tant que Pipeline TD, afin de pouvoir apporter ma rigueur et mon dynamisme à vos projets !
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-inner">
+                <p class="section-label">Contact</p>
+                <div class="contact-grid">
+                    <a href="mailto:chrisal20120@gmail.com" class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">chrisal20120@gmail.com</span>
+                    </a>
+
+                    <a href="https://github.com/CAL20120" class="contact-item">
+                        <span class="contact-label">Github</span>
+                        <span class="contact-value">https://github.com/CAL20120</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/christopher-lucas-764184293/" class="contact-item">
+                        <span class="contact-label">Linkedin</span>
+                        <span class="contact-value">https://www.linkedin.com/in/christopher-lucas-764184293/</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Christopher Lucas - Développeur pipeline</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fermer l'aperçu">&times;</button>
+        <img src="" alt="" id="lightboxImg" class="lightbox-img">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
